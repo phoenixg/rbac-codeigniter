@@ -20,6 +20,7 @@ class Manage extends CI_Controller
 	 */
 	function index()
 	{
+
 		$this->load->view('include/header');
 		$this->load->view('include/nav');
 		$this->load->view('manage_index');
