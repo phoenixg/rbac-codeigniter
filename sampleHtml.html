@@ -1,0 +1,449 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet"
+	href="http://qunarzz.com/flight_intertts/prd/styles/admin/add-2014102918284002.css"
+	type="text/css" />
+<title>国际机票 - 需求单管理</title>
+<!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://qunarzz.com/flight_intertts/prd/styles/bootstrap/bootstrap-ie6-2014102918284002.css" />
+    <![endif]-->
+<!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://qunarzz.com/flight_intertts/prd/styles/bootstrap/ie-2014102918284002.css" />
+    <![endif]-->
+</head>
+<body class="require-body">
+	
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div>
+				<h3>需求单处理</h3>
+				<form id="require_form"
+					action="/tts/backAdmin/international/demand/list"
+					class="form-horizontal form-inline" method="post">
+					<div class="well policy-add">
+						<div class="controls-row">
+							<div class="pull-left">
+								<label class="control-label" for="search_start_date">开始日期：</label>
+								<div class="controls">
+									<input type="text" class="input-medium" name="beginDate"
+										id="search_start_date" placeholder="YYYY-MM-DD"
+										data-jvalid-ruler="allow_empty date" value="" />
+								</div>
+							</div>
+							<div class="pull-left">
+								<label class="control-label" for="search_end_date">结束日期：</label>
+								<div class="controls">
+									<input type="text" class="input-medium" name="endDate"
+										id="search_end_date" placeholder="YYYY-MM-DD"
+										data-jvalid-ruler="allow_empty date" value="" />
+								</div>
+							</div>
+						</div>
+						<div class="controls-row">
+							<div class="pull-left">
+								<label class="control-label" for="status">状态：</label>
+								<div class="controls">
+									<select class="input-medium" name="status">
+										
+										<option value="0"
+											selected='selected'>待报价</option>
+										
+										<option value="1"
+											>已报价</option>
+										
+										<option value="2"
+											>抢单成功</option>
+										
+										<option value="3"
+											>抢单失败</option>
+										
+										<option value="4"
+											>已生单</option>
+										
+										<option value="5"
+											>取消生单</option>
+										
+										<option value="6"
+											>已过期</option>
+										
+									</select>
+								</div>
+							</div>
+							<div class="pull-left">
+								<div class="controls">
+									<button id="search_btn" type="submit" class="btn btn-primary"
+										data-loading-text="搜索中...">搜索</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<input type="hidden" id="pageSize" name="pageSize" value="10" /> 
+					<input type="hidden" id="currentPage" name="currentPage" value="1" />
+				</form>
+				<table class="table table-striped table-bordered">
+					<thead>
+						<th>提交日期</th>
+						<th>行程信息</th>
+						<th>报价</th>
+						<th>操作</th>
+					</thead>
+					<tbody>
+					
+							<tr>
+								<td>2014-10-30 14:13:14
+								</td>
+								<td>
+									
+									<div class="controls-row">
+										第
+										
+										一
+										
+										
+										
+										
+										
+										
+										程：北京-安卡拉
+										2014-11-23
+									</div>
+									
+									<div class="controls-row">
+										第
+										
+										
+										二
+										
+										
+										
+										
+										
+										程：安卡拉-利雅得
+										2014-11-25
+									</div>
+									
+									<div class="controls-row">
+										第
+										
+										
+										
+										三
+										
+										
+										
+										
+										程：利雅得-北京
+										2014-11-28
+									</div>
+									
+									
+									<div class="controls-row">
+										
+										
+											
+												
+												
+													
+												
+											
+										
+										1个成人，0个儿童
+									</div>
+								</td>
+								<td>
+										
+											
+											
+												
+													
+													
+														未报价 
+														
+														   <br/><font color="red">当前最低报价:</font><br/><font style="font-weight: bold;">¥2</font>
+														
+													
+												
+											
+											
+										 
+								</td>
+								<td>
+									
+										
+											
+												<div class="controls-row"><a href="javascript:void(0);" class="js_offer" data-url="/tts/backAdmin/international/demand/showQuotePrice?pageSize=10&currentPage=1&demandId=8221">报价</a></div>
+												<div class="controls-row"><a href="javascript:void(0);" class="js_log" data-url="/tts/backAdmin/international/demand/showLog?demandId=8221">日志查看</a></div>
+											
+											
+											
+											
+										 
+									</td>
+							</tr>
+						
+							<tr>
+								<td>2014-10-30 14:10:49
+								</td>
+								<td>
+									
+									<div class="controls-row">
+										第
+										
+										一
+										
+										
+										
+										
+										
+										
+										程：香港-东京
+										2014-11-03
+									</div>
+									
+									<div class="controls-row">
+										第
+										
+										
+										二
+										
+										
+										
+										
+										
+										程：东京-台北
+										2014-11-14
+									</div>
+									
+									<div class="controls-row">
+										第
+										
+										
+										
+										三
+										
+										
+										
+										
+										程：台北-香港
+										2014-11-16
+									</div>
+									
+									
+									<div class="controls-row">
+										
+										
+											
+												
+												
+													
+												
+											
+										
+										1个成人，0个儿童
+									</div>
+								</td>
+								<td>
+										
+											
+											
+												
+													
+													
+														未报价 
+														
+														   <br/><font color="red">当前最低报价:</font><br/><font style="font-weight: bold;">¥2</font>
+														
+													
+												
+											
+											
+										 
+								</td>
+								<td>
+									
+										
+											
+												<div class="controls-row"><a href="javascript:void(0);" class="js_offer" data-url="/tts/backAdmin/international/demand/showQuotePrice?pageSize=10&currentPage=1&demandId=8220">报价</a></div>
+												<div class="controls-row"><a href="javascript:void(0);" class="js_log" data-url="/tts/backAdmin/international/demand/showLog?demandId=8220">日志查看</a></div>
+											
+											
+											
+											
+										 
+									</td>
+							</tr>
+						
+							<tr>
+								<td>2014-10-30 13:56:20
+								</td>
+								<td>
+									
+									<div class="controls-row">
+										第
+										
+										一
+										
+										
+										
+										
+										
+										
+										程：武汉-墨尔本
+										2014-12-05
+									</div>
+									
+									<div class="controls-row">
+										第
+										
+										
+										二
+										
+										
+										
+										
+										
+										程：悉尼-武汉
+										2015-03-13
+									</div>
+									
+									
+									<div class="controls-row">
+										
+										
+											
+												
+												
+													
+												
+											
+										
+											
+												
+												
+													
+												
+											
+										
+										2个成人，0个儿童
+									</div>
+								</td>
+								<td>
+										
+											
+											
+												
+													
+													
+														未报价 
+														
+														   <br/><font color="red">当前最低报价:</font><br/><font style="font-weight: bold;">¥4</font>
+														
+													
+												
+											
+											
+										 
+								</td>
+								<td>
+									
+										
+											
+												<div class="controls-row"><a href="javascript:void(0);" class="js_offer" data-url="/tts/backAdmin/international/demand/showQuotePrice?pageSize=10&currentPage=1&demandId=8219">报价</a></div>
+												<div class="controls-row"><a href="javascript:void(0);" class="js_log" data-url="/tts/backAdmin/international/demand/showLog?demandId=8219">日志查看</a></div>
+											
+											
+											
+											
+										 
+									</td>
+							</tr>
+						 
+						 
+						
+							 <tr>
+								<td colspan="4">
+									<div class="pull-right">
+										<div class="pagination pagination-small pull-left">
+											<ul>
+												
+													
+														<li class="disabled"><a>首页</a></li>
+														<li class="disabled"><a>上页</a></li>
+													
+													
+												
+												
+
+													<li class='active'><a
+														href="javascript:goToPage(1)">1</a></li>
+
+												
+												
+													
+														<li class="disabled"><a>下页</a></li>
+														<li class="disabled"><a>尾页</a></li>
+													
+													
+												
+											</ul>
+										</div>
+
+										<span>共3条/1页</span>
+										显示 <select class="input-mini" name="page_size" id="page_size"
+											onchange="goToPage(1)">
+
+											<option selected='selected'
+												  value="10">10</option>
+											<option  value="20">20</option>
+										</select> 条/页
+									</div></td>
+							</tr>
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+<!-- Modal -->
+<div class="modal fade require-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display:none;">
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">报价</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button id="baojia_btn" type="submit" class="btn btn-primary" data-loading-text="提交中...">提交</button>
+      </div>
+     
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+	<script type="text/javascript">
+		function goToPage(currentPage) {
+			$("#pageSize").val($("#page_size").val());
+			$("#currentPage").val(currentPage);
+			$('#require_form').submit();
+		}
+	</script>
+	<script src="http://qunarzz.com/jquery/prd/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript"
+		src="http://qunarzz.com/flight_intertts/prd/scripts/admin/release/requirement-2014102918284002.js"></script>
+	<!--[if lte IE 6]>
+    <script type="text/javascript" src="http://qunarzz.com/flight_intertts/prd/scripts/bootstrap/bootstrap-ie-2014102918284002.js"></script>
+    <![endif]-->
+</body>
+</html>
